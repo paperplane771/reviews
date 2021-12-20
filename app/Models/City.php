@@ -8,7 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class City extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'name'
     ];
+
+    public function users()
+    {
+        $this->belongsToMany(User::class);
+    }
+
+    public function reviews()
+    {
+        $this->belongsToMany(City::class);
+    }
 }
