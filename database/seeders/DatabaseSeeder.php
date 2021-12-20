@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\City;
 use App\Models\Review;
 use App\Models\User;
+use App\Services\City\updateCities;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,8 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->count('100')->create();
-        City::factory()->count('100')->create();
-        Review::factory()->count('200')->create();
+        User::factory()->count('250')->create();
+        $cities = new updateCities();
+        $cities->update();
+        Review::factory()->count('1000')->create();
     }
 }

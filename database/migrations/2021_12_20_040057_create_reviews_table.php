@@ -20,6 +20,7 @@ class CreateReviewsTable extends Migration
             $table->foreignIdFor(City::class);
             $table->string('title');
             $table->string('text');
+            $table->text('img')->nullable();
             $table->enum('rating',[1,2,3,4,5]);
             $table->foreignIdFor(User::class);
             $table->timestamps();
