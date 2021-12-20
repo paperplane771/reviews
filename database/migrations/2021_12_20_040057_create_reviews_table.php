@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
+use App\Models\City;
 
 class CreateReviewsTable extends Migration
 {
@@ -15,11 +17,11 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor('City','id');
+            $table->foreignIdFor(City::class);
             $table->string('title');
             $table->string('text');
             $table->enum('rating',[1,2,3,4,5]);
-            $table->foreignIdFor('User','id');
+            $table->foreignIdFor(User::class);
             $table->timestamps();
         });
     }
