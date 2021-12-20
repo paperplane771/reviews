@@ -12,7 +12,9 @@ class Review extends Model
     protected $fillable = [
         'title',
         'text',
-        'rating'
+        'rating',
+        'city_id',
+        'user_id'
     ];
 
     public function user()
