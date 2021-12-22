@@ -124,6 +124,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/breeze" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/blade-ui-kit/blade-ui-kit" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hflabs/dadata" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ryangjchandler/blade-tabler-icons" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/blade-ui-kit/blade-icons" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

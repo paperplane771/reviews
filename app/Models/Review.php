@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
     use HasFactory;
+    protected $with=['city'];
 
     protected $fillable = [
         'title',
@@ -19,11 +20,12 @@ class Review extends Model
 
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function city()
     {
-        $this->belongsTo(City::class);
+        return $this->belongsTo(City::class);
     }
+
 }
