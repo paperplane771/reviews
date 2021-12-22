@@ -39,8 +39,8 @@ class MainPage extends Component
 //        $reviews = $query->where('city.name', '=', session('city'));
 
         $city = City::where('name', session('city'))->first();
-        $reviews = Review::all()->where('city_id', '=', $city->id);
-
+        $reviews = Review::where('city_id', '=', $city->id)->orderBy('title','asc')->get();
+        
         return view('livewire.main-page', ['city' => $request->session()->get('city'), 'reviews' => $reviews]);
     }
 }
